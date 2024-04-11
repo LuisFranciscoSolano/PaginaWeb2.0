@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMESHARK</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+  <body>
+    <header>
+      <div class="menu logo-nav">
+        <a href="INDEX.HTML" class="logo">GAMESHARK</a>
+        <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
+        <nav class="navigation">
+          <ul>
+            <li><a href="productos.html">PRODUCTOS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li class="search-icon">
+              <input type="search" placeholder="Search">
+              <label class="icon">
+                <span class="fas fa-search"></span>
+              </label>
+              <li class="car"><a href="carrito.html" >
+                <img src="Imagenes/canasta.svg" alt="Carrito de Compras"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container-carrito">
+
+                  <h2>Realizar Compra</h2>
+                  <form id="procesar-pago" action="" method="POST">
+                      <div class="contenido titulo">
+                          <label for="cliente" class="#">Cliente :</label>
+                          <input type="text" class="form-control" id="cliente" name="cliente" placeholder="Ingrese su nombre" onkeypress="return sololetras(event)" onpaste="return false" required>
+                      </div>
+                      <div class="contenido titulo">
+                          <label for="email" class="">Correo :</label>
+                          <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo" required>
+                      </div>
+
+                      <div id="carrito" class="contenido">
+                          <table class="tabla" id="lista-compra">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Imagen</th>
+                                      <th scope="col">Nombre</th>
+                                      <th scope="col">Precio</th>
+                                      <th scope="col">Cantidad</th>
+                                      <th scope="col">Sub Total</th>
+                                      <th scope="col">Eliminar</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+
+                              </tbody>
+                              <tr>
+                                  <th colspan="4" scope="col" class="">SUB TOTAL :</th>
+                                  <th scope="col">
+                                      <p id="subtotal"></p>
+                                  </th>
+                              </tr>
+                              <tr>
+                                  <th colspan="4" scope="col" class="">IGV :</th>
+                                  <th scope="col">
+                                      <p id="igv"></p>
+                                  </th>
+                              </tr>
+                              <tr>
+                                  <th colspan="4" scope="col" class="">TOTAL :</th>
+                                  <th scope="col">
+                                    <input type="text" id="total" name="monto_total" readonly>
+                                  </th>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <div class="" id="loaders">
+                          <img id="cargando" src="Imagenes/cargando.gif" width="220">
+                      </div>
+
+                      <div class="botones-envio">
+                              <a href="Productos.html" class="button" id="volver">Seguir comprando</a>
+                              <input type="submit" class="button" id="procesar-compra" onclick="validarCorreo(form.correo.value)"value="Realizar compra">
+                      </div>
+                  </form>
+
+      </div>
+  </main>
+    
+  <footer>
+    <div class="contenedor">
+      <div class="seccion-izquierda">
+        <h3>GAMESHARK</h3>
+        <ul>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Vender un artículo</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Franquicias</a></li>
+        </ul>
+      </div>
+      <div class="seccion-central">
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="#">Ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="seccion-derecha">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+        <div class="redes-sociales">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+  <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script  src="script.js"></script>
+
+</body>
+</html>
